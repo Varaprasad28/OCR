@@ -73,7 +73,7 @@ chrome.commands.onCommand.addListener(async (command) => {
           }
           timer = setTimeout(async () => {
             // Send savedText to Gemini API
-            const geminiApiKey = "AIzaSyBlwf7ASGH4_Orckb03TvCGZyV4y9cr5dI";
+            const geminiApiKey = "<geminiApiKey>";
             const geminiApiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${geminiApiKey}`;
 
             const promptText = getPromptText(command, savedText);
@@ -176,8 +176,8 @@ async function urlToArrayBuffer(dataUrl) {
 async function analyzeImageAzure(imageBuffer) {
   console.log('analyzeImageAzure called');
 
-  const endpoint = 'https://saketh123.cognitiveservices.azure.com/';
-  const subscriptionKey = 'FTM9E5pXgKj7AJEwqoZJp1gUv9k45ceVg1Tip5uvupBP1yZnqtM3JQQJ99';
+  const endpoint = '<ENDPOINT>';
+  const subscriptionKey = '<subscriptionKey>';
   const apiUrl = `${endpoint}/computervision/imageanalysis:analyze?features=caption,read&model-version=latest&language=en&api-version=2024-02-01`;
 
   console.log('API URL:', apiUrl);
