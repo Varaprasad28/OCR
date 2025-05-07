@@ -1,0 +1,13 @@
+/* content.css */
+
+#floating-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  cursor: move;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  display: none; /* Start hidden */
+}

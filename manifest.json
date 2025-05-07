@@ -1,0 +1,60 @@
+{
+
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "name": "OCR - Image Reader",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "activeTab",
+    "notifications",
+    "scripting",
+    "clipboardWrite"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["gun.js","content.js","html2canvas.min.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "commands": {
+    "run_ocr": {
+      "suggested_key": {
+        "default": "Ctrl+Y"
+      },
+      "description": "Coding"
+    },
+    "run_ocr1": {
+      "suggested_key": {
+        "default": "Ctrl+B"
+      },
+      "description": "Aptitude"
+    },
+    "run_ocr2": {
+      "suggested_key": {
+        "default": "Ctrl+Q"
+      },
+      "description": "psudo code"
+    },
+    "run_ocr3": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Coding"
+    }
+  },
+  "action": {},
+  "content_security_policy": {
+    
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["popup.html","content.js","html2canvas.min.js"],
+    "matches": ["<all_urls>"]
+  }]
+}

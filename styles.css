@@ -1,0 +1,40 @@
+/* Basic reset and positioning */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* Selection box styling */
+  .itrisearch-box {
+    position: absolute;
+    border: 2px solid rgba(0, 153, 255, 0.7);
+    background-color: rgba(0, 153, 255, 0.3);
+    cursor: crosshair;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  /* Guide styling */
+  .itrisearch-guide-1, .itrisearch-guide-2, .itrisearch-guide-3 {
+    position: absolute;
+    border: 1px dashed rgba(0, 153, 255, 0.7);
+    pointer-events: none;
+    z-index: 9998;
+  }
+  
+  .itrisearch-guide-1 {
+    border-width: 0 0 1px 0;
+    background: rgba(0, 153, 255, 0.2);
+  }
+  
+  .itrisearch-guide-2 {
+    border-width: 0 1px 0 0;
+    background: rgba(0, 153, 255, 0.2);
+  }
+  
+  .itrisearch-guide-3 {
+    border-width: 1px 1px 0 0;
+    background: rgba(0, 153, 255, 0.2);
+  }
+  
